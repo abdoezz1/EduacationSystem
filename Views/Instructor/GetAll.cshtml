@@ -1,0 +1,45 @@
+﻿@model List<Instructor>
+
+    @{
+        Layout = "_TraineeLay";
+    }
+
+
+    @foreach (var t in Model)
+    {
+                  <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-info text-center">
+                      <h4> Name : @t.Name</h4>
+                      <span>Address : @t.Address</span>
+                    </div>
+
+                    <div class="member-info text-center">
+                             <span><a href="/Ins/@t.Id" class="btn btn-secondary">Details</a></span>
+                    </div>
+
+                    <div class="member-info text-center">
+                             <span><a href="/InsU/@t.Id" class="btn btn-secondary">Update</a></span>
+                   </div>
+
+                    <div class="member-info text-center">
+                             <span><a href="/Instructor/Delete/@t.Id" class="btn btn-secondary">Delete</a></span>
+                    </div>
+                   </div>
+    }
+
+@section Addition {
+        <nav class="breadcrumbs">
+            <div class="container">
+              <ol>
+                <li><a href="/Crs_result/InsertResult">Result</a></li>
+                <li class="current"><a href="/InsA">Add</a></li>
+              </ol>
+            </div>
+          </nav>
+}
+@section Title
+{
+            <div class="col-lg-8">
+                  <h1>Our Instructors</h1>
+             </div>
+}

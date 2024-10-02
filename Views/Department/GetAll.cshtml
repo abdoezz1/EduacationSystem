@@ -1,0 +1,48 @@
+﻿@model List<Department>
+
+@{
+    Layout = "_TraineeLay";
+}
+
+
+@foreach (var t in Model)
+{
+                      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-img">
+                              <img src="/assets/img/events-item-2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info text-center">
+                          <h4>@t.Name</h4>
+                          <span>@t.Manager</span>
+                        </div>
+
+                        <div class="member-info text-center">
+                                 <span><a href="/Depts/@t.Dept_id" class="btn btn-secondary">Details</a></span>
+                        </div>
+
+                        <div class="member-info text-center">
+                                     <span><a href="/DeptsU/@t.Dept_id" class="btn btn-secondary">Update</a></span>
+                       </div>
+
+                        <div class="member-info text-center">
+                                 <span><a href="/Department/Delete/@t.Dept_id" class="btn btn-secondary">Delete</a></span>
+                        </div>
+                       </div>
+}
+
+@section Addition {
+        <nav class="breadcrumbs">
+            <div class="container">
+              <ol>
+                 <li><a href="/Instructor/HomePage">Home</a></li>
+                <li class="current"><a href="/DeptsA">Add</a></li>
+              </ol>
+            </div>
+          </nav>
+}
+@section Title
+{
+            <div class="col-lg-8">
+                  <h1>Our Departments</h1>
+             </div>
+}

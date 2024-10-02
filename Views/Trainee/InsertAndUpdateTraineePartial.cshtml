@@ -1,0 +1,27 @@
+﻿
+@model Trainee
+
+@{
+	SelectList deptOpt = new SelectList(ViewBag.Departments, "Dept_id", "Name");
+}	
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+  <div class="form-group">
+	<label asp-for="Name">Name</label>
+	<input asp-for="Name" class="form-control"   placeholder="Enter Trainee Name">
+	<span style="color:red" asp-validation-for="Name"></span>
+  </div>
+  <div class="form-group">
+	<label asp-for="Address"></label>
+	<input asp-for="Address" class="form-control"  placeholder="Address">
+	<span style="color:red" asp-validation-for="Address"></span>
+  </div>
+  <div class="form-group">
+	<label  asp-for="image" for="exampleFormControlFile1"></label><br>
+	<input  asp-for="image" type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <div class="form-group">
+	<label asp-for="Dept_id"></label><br>
+	<select asp-for="Dept_id" asp-items="deptOpt" class="form-control"></select><br>
+  </div>

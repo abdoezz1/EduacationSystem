@@ -1,0 +1,54 @@
+﻿@model Instructor
+@{
+    Layout = "_TraineeLay";
+}
+<section id="hero" class="hero section dark-background">
+
+      <img src="/assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-delay="100">Learning Today,<br>Leading Tomorrow</h2>
+        <p data-aos="fade-up" data-aos-delay="200">We are team of talented Instructors</p>
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+          <a asp-action="GetAll" asp-controller="Course" class="btn-get-started">Get Started</a>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Our Vision</h3>
+            <p class="fst-italic">
+                At [Mentor], our vision is to transform the way knowledge is accessed and shared,
+                empowering learners of all ages to reach their full potential. 
+                We strive to create an inclusive and dynamic educational environment where curiosity is nurtured, 
+                critical thinking is fostered, and lifelong learning is celebrated. 
+                By harnessing the latest technology and innovative teaching methods,
+                we aim to break down barriers to education, making high-quality resources accessible to everyone, everywhere.
+                Our goal is to inspire a global community of learners to embrace
+                knowledge, drive personal and professional growth, and contribute positively to the world.
+            </p>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+@section Title
+    {
+                <div class="col-lg-8">
+                      <h1>Home Page</h1>
+                 </div>
+}

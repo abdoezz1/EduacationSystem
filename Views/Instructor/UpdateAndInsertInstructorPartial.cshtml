@@ -1,0 +1,47 @@
+﻿@model Instructor
+
+@{
+	SelectList deptOpt = new SelectList(ViewBag.Departments, "Dept_id", "Name");
+	SelectList CourseOpt = new SelectList(ViewBag.Courses, "Id", "Name");
+}
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+  <div class="form-group">
+	<label asp-for="Name">Name</label>
+	<input asp-for="Name" class="form-control"   placeholder="Enter Instructor Name">
+	<span style="color:red" asp-validation-for="Name"></span>
+  </div>
+  <div class="form-group">
+	<label asp-for="Address"></label>
+	<input asp-for="Address" class="form-control"  placeholder="Address">
+	<span style="color:red" asp-validation-for="Address"></span>
+  </div>
+  <div class="form-group">
+	<label asp-for="Salary"></label>
+	<input asp-for="Salary" class="form-control"  placeholder="Salary">
+	<span style="color:red" asp-validation-for="Salary"></span>
+  </div>
+  <br>
+ 
+
+  <div class="form-group">
+	<label  asp-for="Image" for="exampleFormControlFile1"></label><br>
+	<input  asp-for="Image" type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <br>
+
+  <div class="form-group">
+	<label asp-for="Dept_id"></label><br>
+	<select asp-for="Dept_id" asp-items="deptOpt" class="form-control"></select><br>
+  </div>
+   <div class="form-group">
+	<label asp-for="Course_id"></label><br>
+	<select asp-for="Course_id" asp-items="CourseOpt" class="form-control"></select><br>
+  </div>
+
+
+
+	
+	

@@ -1,0 +1,20 @@
+﻿@model Department
+
+<form method="post" asp-action="SaveUpdate" asp-controller="Department" asp-route-Dept_id="@Model.Dept_id" asp-route-name="@Model.Name">
+
+    <partial name="InsertAndUpdateDeptPartial" />
+    <br >
+    <button type="submit" class="btn btn-outline-primary">Update</button>
+    </form>
+@section Scripts {
+            <script src="/lib/jquery/dist/jquery.js"></script>
+            <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+            <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@section DetailedTitle
+{
+            <div class="col-lg-8">
+                  <h1>Update @Model.Name Department</h1>
+             </div>
+}

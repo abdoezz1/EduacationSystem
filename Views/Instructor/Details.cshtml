@@ -1,0 +1,55 @@
+﻿@model Instructor
+
+
+ <section id="trainers-index" class="section trainers-index">
+
+      <div class="container">
+
+        <div class="row">
+
+
+
+<div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="/assets/img/testimonials/@Model.Image" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Instructor Name : @Model.Name</h4>
+                <span>Course Name : @Model.Courses.Name</span>
+                  <span>Dept Name : @Model.Departments.Name</span>
+                <span>Address : @Model.Address</span>
+                <span>Salary : @Model.Salary</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+ </div><!-- End Team Member -->
+
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Trainers Index Section -->
+
+@section Back
+{
+          <div class="container">
+              <ol>
+                <li><a href="/Instructor/HomePage">Home</a></li>
+               <li class="current"><a href="/Ins">Back</a></li>
+              </ol>
+            </div>
+}
+
+@section DetailedTitle
+{
+            <div class="col-lg-8">
+                      <h1>@Model.Name Profile</h1>
+                      <p class="mb-0">Instructor</p>
+              </div>
+}

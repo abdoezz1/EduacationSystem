@@ -1,0 +1,21 @@
+﻿@model Course
+
+<form method="post" asp-controller="Course" asp-action="SaveUpdate" asp-route-id="@Model.Id" asp-route-name="@Model.Name">
+	<partial name="InsertAndUpdateCoursesPartial" />
+	<br>
+	<button type="submit" class="btn btn-outline-primary">Update</button>
+	<br>
+</form>
+@section Scripts {
+			<script src="/lib/jquery/dist/jquery.js"></script>
+			<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+			<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+@section DetailedTitle
+{
+				<div class="col-lg-8">
+					  <h1>Update @Model.Name Course</h1>
+				 </div>
+}

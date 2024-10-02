@@ -1,0 +1,75 @@
+﻿@using MVC_day1.ViewModel
+@model DeptViewModelVM
+
+
+ <section id="trainers-index" class="section trainers-index">
+
+      <div class="container">
+
+        <div class="row">
+
+
+
+            <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="/Images/download.jpeg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Dept Name : @Model.Name</h4>
+                <span>Manager Name : @Model.Manager</span>
+               <h6 class="card-text" st>Instructor Info</h6>
+
+                        @foreach (var cr in Model.Instructor)
+                        {
+                               <span>@cr.Name - @cr.Address </span>
+                             
+                        }
+               <hr />
+               <h6 class="card-text" st> Trainees :</h6>
+                        @foreach (var cr in Model.Trainee_Name)
+                        {
+                             <span> @cr</span>
+
+                        }
+                         <hr />
+                        <h6 class="card-text" st> Courses :</h6>
+                        @foreach (var cr in Model.Course_Name)
+                        {
+                                <span> @cr</span>
+
+                        }
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+ </div><!-- End Team Member -->
+
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Trainers Index Section -->
+
+
+@section Back
+{
+              <div class="container">
+                  <ol>
+                    <li><a href="/Instructor/HomePage">Home</a></li>
+                   <li class="current"><a href="/Depts">Back</a></li>
+                  </ol>
+                </div>
+}
+
+@section DetailedTitle
+{
+        <div class="col-lg-8">
+                  <h1>Welcome To our Department</h1>
+                  <p class="mb-0">@Model.Name</p>
+          </div>
+}

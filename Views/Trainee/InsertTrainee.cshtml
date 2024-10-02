@@ -1,0 +1,20 @@
+﻿@model Trainee
+
+<form method="post" asp-action="AddTrainee" asp-controller="Trainee">
+
+	<partial name="InsertAndUpdateTraineePartial">
+	<br>
+	<button type="submit" class="btn btn-outline-primary">Add </button>
+</form>
+@section Scripts {
+			<script src="/lib/jquery/dist/jquery.js"></script>
+			<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+			<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@section DetailedTitle
+{
+			<div class="col-lg-8">
+				  <h1>New Trainee</h1>
+			 </div>
+}

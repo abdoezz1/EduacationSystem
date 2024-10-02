@@ -1,0 +1,55 @@
+﻿@using MVC_day1.ViewModel
+@model TraineeViewModel
+
+
+
+<div class="card" style="width: 24rem;">
+    <img class="card-img-top" src="/assets/img/trainers/@Model.image" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">Trainee Name : @Model.Name</h5>
+        <p class="card-title"> Dept Name : @Model.Department </p>
+
+        <table class="table">
+            <thead>
+                        <tr>
+                            <th scope="col">Course Name : </th>
+
+                            <th scope="col">Grade</th>
+                         </tr>
+                 </thead>
+
+        
+        @foreach(var cr in Model.Courses)
+           {
+                   
+                 <tbody>
+                         <tr>
+                                 <th class="card-text">@cr.CourseName</th>
+                                 <td class="card-text" style="@cr.color ">@cr.Grade</td>
+                         </tr>
+
+                 </tbody>
+                       
+                           
+           }
+
+        </table>
+    </div>
+</div>
+@section Back
+{
+              <div class="container">
+                  <ol>
+                   <li><a href="/Instructor/HomePage">Home</a></li>
+                   <li class="current"><a href="/Trainee">Back</a></li>
+                  </ol>
+                </div>
+}
+
+@section DetailedTitle
+{
+                <div class="col-lg-8">
+                          <h1>@Model.Name Profile</h1>
+                          <p class="mb-0">Trainee</p>
+                  </div>
+}

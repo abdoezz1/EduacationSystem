@@ -1,0 +1,30 @@
+﻿@model Crs_result 
+
+@{
+	
+	SelectList Courses = new SelectList(ViewBag.Courses, "Id", "Name");
+	SelectList Trainess = new SelectList(ViewBag.Trainees, "Id", "Name");
+}
+<form method="post" asp-action="AddResult" asp-controller="Crs_result" >
+	
+
+	
+
+	<label asp-for="@Model.Course_id"></label><br>
+	<select asp-for="@Model.Course_id" asp-items="Courses"></select><br>
+
+	<label asp-for="@Model.Trainee_id"></label><br>
+	<select asp-for="@Model.Trainee_id" asp-items="Trainess"></select><br>
+	
+
+	<label asp-for="@Model.Degree"></label><br>
+	<input asp-for="@Model.Degree" /><br>
+
+	<button type="submit" class="btn btn-outline-primary">Add</button><br>
+</form>
+
+@section DetailedTitle{
+		<div class="col-lg-8">
+				  <h1>Results</h1>
+	   </div>
+}
